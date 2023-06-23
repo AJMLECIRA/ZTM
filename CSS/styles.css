@@ -1,1 +1,232 @@
+body {
+	margin: auto 0px;
+	font-family: "Montserrat";
+	font-size: 16px;
+}
+/*######   General   #######*/
+.pointer {
+	cursor: pointer;
+}
+.bold {
+	font-weight: 900;
+}
+/*###### End General #######*/
+.navbar {
+	position: relative;
+	display: flex;
+	list-style: none;
+	font-size: 1.4rem;
+	margin: 0;
+	background-color: #fff;
+	/*padding: 15px 5vw 10px;*/
+	height: 7vh;
+	width: 100vw;
+}
+.navItem {
+	align-self: center;
+	padding: 15px 5vw 10px 20px;
+}
+.navItemEnd {
+	margin-left: auto;
+	padding-right: 0;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+	font-weight: 300;
+	text-transform: uppercase;
+	height: 30px;
+}
+#navWing {
+	z-index: 5;
+	position: fixed;
+	padding-top: 80px;
+	padding-right: 5vw;
 
+	text-align: right;
+	right: 0;
+	top: 0vh;
+	height: 100vh;
+	width: 350px;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	right: -350vw; /* Assume this is the width of #navWing */
+	height: 100%;
+	transition: right 0.3s ease;
+}
+#navWing.open {
+	right: 0;
+}
+.navWingItem {
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	font-weight: 300;
+	text-transform: uppercase;
+	height: 30px;
+	padding: 2vh;
+	cursor: pointer;
+}
+.navWingItem a {
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}
+
+
+
+.projectGrid {
+	background-color: #fffe;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.gridItem > img {
+	width: 100%;
+}
+.gridItem {
+	padding: 100px;
+	margin: 20px;
+	border: solid 1px #fff;
+}
+.gridItem > img:hover {
+	transform: scale(1.2);
+	box-shadow: 0 3px 10px #0cc6de;
+}
+
+/* ######   Footer   #######*/
+.footer {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: 1fr;
+	margin: 0 5vw;
+	background-color: #fff;
+	width: auto;
+	bottom: 30px;
+}
+.footMenuBox {
+	margin-left: 5vw;
+}
+.footerMenu {
+	padding-bottom: 5px;
+}
+.footerMenuTitle {
+	font-weight: 900;
+	line-height: 3vh;
+}
+.footerMenuItem {
+	font-weight: 300;
+	line-height: 3vh;
+	font-size: 0.9em;
+}
+.footerMenuItem a {
+	color: rgba(0, 0, 0, 0.8);
+	transition: text-shadow 0.2s ease;
+	text-decoration: none;
+}
+.footerMenuItem a:hover {
+	cursor: pointer;
+	text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.8);
+}
+.social a {
+	color: #000;
+}
+/* ###### END Footer #######*/
+/* ######   Menu Icon   #######*/
+#nav-icon3 {
+	z-index: 10;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	margin: 0px auto;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+#nav-icon3 span {
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background: rgb(162, 162, 162, 1);
+	border-radius: 4px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+#nav-icon3 span:nth-child(1) {
+	top: 0px;
+}
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+	top: 12px;
+}
+#nav-icon3 span:nth-child(4) {
+	top: 24px;
+}
+#nav-icon3.open span:nth-child(1) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+#nav-icon3.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+#nav-icon3.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+#nav-icon3.open span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+/* ###### End Menu Icon #######*/
+@media only screen and (max-width: 960px) {
+	.tabletHide {
+		display: none;
+	}
+	.footer{
+		grid-template-columns: repeat(2, 50%);
+	}
+}
+@media only screen and (max-width: 600px) {
+	navbar {
+		font-size: 0.9rem;
+	}
+	.navItemEnd {
+		color: #fff;
+	}
+	.footer{
+		grid-template-columns: 1fr;
+	}
+	.footerMenuTitle{
+		padding:5px 0;
+	}
+	.footerMenuItem, .footerMenuTitle{
+		text-align: center;
+	}
+	.social{
+		display:flex;
+		justify-content:space-between;
+	}
+	.social {
+		font-size:1.8em;
+	}
+}
