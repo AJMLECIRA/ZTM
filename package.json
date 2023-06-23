@@ -14,5 +14,8 @@
     "url": "ZTM"
   },
   "author": "Andrew Mayers",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
 }
